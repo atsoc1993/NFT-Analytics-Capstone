@@ -1,0 +1,17 @@
+{
+  "name": "mongodb_marketplaces_codex",
+  "version": "1.0.0",
+  "main": "write_sales_to_db.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.2.0",
+    "mongoose": "^8.16.3"
+  }
+}
