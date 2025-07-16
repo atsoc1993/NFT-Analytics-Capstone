@@ -1,4 +1,38 @@
 .searchbar-div {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 100%;
 }
+
+.searchbar-div input {
+    width: 513px;
+    margin-bottom: 20px;
+}
+.searchbar-div div {
+    min-width: 500px;
+    background-color: whitesmoke;
+}
+
+.search-result-div div {
+    margin: 4px;
+    background-color: whitesmoke;
+
+}
+
+.search-result-div {
+    border: 1px solid black;
+    box-shadow: 1px 2px 2px 2px gray;
+    border-radius: 10px;
+}
+
+.search-result-div div {
+    margin: 10px;
+
+}
+.search-result-div div:hover {
+    background-color: beige;
+    cursor: pointer;
+}
+
+

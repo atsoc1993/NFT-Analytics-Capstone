@@ -1,22 +1,24 @@
 import { useEffect } from "react"
 import Header from './components/Header.jsx'
-
 import SearchBar from "./components/SearchBar";
+import { useState } from "react";
+
 function App() {
 
-  // useEffect(() => {
-  //   testEndpoint();
-  // }, [])
-
-  // const testEndpoint = async () => {
-  //   
-  // }
+  const [inspectingAsset, setInspectingAsset] = useState(false);
 
   return (
     <>
-    <Header/>
-    <SearchBar/>
+      {!inspectingAsset ?
+        <>
+          <Header />
+          <SearchBar setInspectingAsset={setInspectingAsset} />
+        </>
+        :
+        <div>User is inspecting an asset</div>
+      }
     </>
+
   )
 }
 
