@@ -1,18 +1,22 @@
 import { useEffect } from "react"
+import Header from './components/Header.jsx'
 
+import SearchBar from "./components/SearchBar";
 function App() {
 
-  useEffect(() => {
-    testEndpoint();
-  }, [])
-  
-  const testEndpoint = async () => {
-    let response = await fetch('http://localhost:3000/get-assets/1')
-    console.log(response)
-  }
+  // useEffect(() => {
+  //   testEndpoint();
+  // }, [])
+
+  // const testEndpoint = async () => {
+  //   
+  // }
 
   return (
-    <div>Test</div>
+    <>
+    <Header/>
+    <SearchBar/>
+    </>
   )
 }
 

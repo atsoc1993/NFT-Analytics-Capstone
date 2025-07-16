@@ -25,7 +25,8 @@ app.get('/get-assets/:assetNameOrID', async (req, res) => {
     console.log(searchType);
     let regexSearchExpr = new RegExp(`^${chars}`, 'i')
     let sales = await Sale.find({ [searchType]: { $regex: regexSearchExpr } })
-    console.log(sales)
+    console.log(sales);
+    res.json(sales.slice(0, 10));
 
 })
 

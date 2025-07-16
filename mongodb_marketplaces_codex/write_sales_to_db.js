@@ -5,7 +5,7 @@ import dotenv from 'dotenv'
 
 dotenv.config({ path: '../.env' })
 
-let data = fs.readFileSync('./algoxnft_sales_with_names.jsonl', 'utf-8')
+let data = fs.readFileSync('./algoxnft_sales.jsonl', 'utf-8')
 data = data.split('\n')
 data = data.filter(line => line !== '')
 data = data.map(line => JSON.parse(line))
@@ -23,13 +23,9 @@ try {
 
 for (let d of data) {
     let saleObj = {
-        'asset-id': String(d['asset_id']),
+        'asset-id': String(d['asset-id']),
         'asset-name': d['asset-name'],
-        'algo-amt': Number(d['algo_amt']),
-        'lister': d['lister'],
-        'buyer': d['buyer'],
-        'tx-id': d['tx_id'],
-        'timestamp': Number(d['timestamp'])
+        'sales': d['sales']
     }
 
     try {
@@ -39,3 +35,5 @@ for (let d of data) {
         console.log(e)
     }
 }
+
+console.log("Finished")
